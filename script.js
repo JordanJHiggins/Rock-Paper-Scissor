@@ -6,11 +6,7 @@ function getComputerChoice() {
   return randomChoice;
 }
 
-// Get player selection
-// let playerSelection = window.prompt("Make a selection: ");
-// let computerSelection = getComputerChoice();
-
-// Play a round between comp and human player
+// Play a single round between comp and human player
 function playRound(computerSelection, playerSelection) {
   if (computerSelection === playerSelection) {
     console.log(
@@ -31,10 +27,11 @@ function playRound(computerSelection, playerSelection) {
   }
 }
 
-let tie = 0;
+// Score counter variables
 let playerScore = 0;
 let computerScore = 0;
 
+// Initialize a game of 5 rounds
 function game() {
   for (let i = 0; i < 5; i++) {
     let playerSelection = window.prompt("Make a selection: ");
