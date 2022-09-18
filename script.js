@@ -34,8 +34,8 @@ let computerScore = 0;
 // Initialize a game of 5 rounds
 function game() {
   for (let i = 0; i < 5; i++) {
-    let playerSelection = window.prompt("Make a selection: ");
-    let computerSelection = getComputerChoice();
+    let playerSelection = window.prompt("Make a selection: ").toLowerCase();
+    let computerSelection = getComputerChoice().toLowerCase();
     playRound(computerSelection, playerSelection);
   }
 
