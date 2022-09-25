@@ -1,10 +1,21 @@
 let choices = ["rock", "paper", "scissors"];
-
+const container = document.querySelector("#container");
 // Random computer selection
 function getComputerChoice() {
   let randomChoice = choices[Math.floor(Math.random() * choices.length)];
   return randomChoice;
 }
+const rockButton = document.createElement("button");
+const paperButton = document.createElement("button");
+const scissorsButton = document.createElement("button");
+
+rockButton.textContent = "Rock";
+paperButton.textContent = "Paper";
+scissorsButton.textContent = "Scissors";
+
+container.appendChild(rockButton);
+container.appendChild(paperButton);
+container.appendChild(scissorsButton);
 
 // Play a single round between comp and human player (console.logs will become returns when GUI is added)
 function playRound(computerSelection, playerSelection) {
