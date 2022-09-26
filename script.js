@@ -20,13 +20,12 @@ rockButton.textContent = "Rock";
 paperButton.textContent = "Paper";
 scissorsButton.textContent = "Scissors";
 
-rockButton.classList.add("rockButton");
-
 container.appendChild(rockButton);
 container.appendChild(paperButton);
 container.appendChild(scissorsButton);
 container.appendChild(playerScoreCounter);
 container.appendChild(computerScoreCounter);
+container.appendChild(gameResult);
 
 // On click update player and computer selections
 rockButton.addEventListener("click", () => {
@@ -73,16 +72,14 @@ function playRound(computerSelection, playerSelection) {
 // Determine the winner and disable buttons
 function game() {
   if (playerScore >= 5) {
-    console.log(
-      `Gameover! you win Player: ${playerScore} Computer: ${computerScore}`
-    );
+    gameResult.innerHTML = `Gameover! you win Player: ${playerScore} Computer: ${computerScore}`;
+
     rockButton.setAttribute("disabled", "disabled");
     paperButton.setAttribute("disabled", "disabled");
     scissorsButton.setAttribute("disabled", "disabled");
   } else if (computerScore >= 5) {
-    console.log(
-      `Gameover! You lose Computer: ${computerScore} Player: ${playerScore}`
-    );
+    gameResult.innerHTML = `Gameover! You lose Computer: ${computerScore} Player: ${playerScore}`;
+
     rockButton.setAttribute("disabled", "disabled");
     paperButton.setAttribute("disabled", "disabled");
     scissorsButton.setAttribute("disabled", "disabled");
