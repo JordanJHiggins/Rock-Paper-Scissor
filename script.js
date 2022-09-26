@@ -14,13 +14,13 @@ const paperButton = document.createElement("button");
 const scissorsButton = document.createElement("button");
 const playerScoreCounter = document.createElement("h3");
 const computerScoreCounter = document.createElement("h3");
+const gameResult = document.createElement("h1");
 
 rockButton.textContent = "Rock";
 paperButton.textContent = "Paper";
 scissorsButton.textContent = "Scissors";
 
-// playerScoreCounter.innerHTML += playerScore;
-// computerScoreCounter.innerHTML += computerScore;
+rockButton.classList.add("rockButton");
 
 container.appendChild(rockButton);
 container.appendChild(paperButton);
@@ -46,7 +46,7 @@ scissorsButton.addEventListener("click", () => {
   playRound(computerSelection, playerSelection);
 });
 
-// Play a single round between comp and human player (console.logs will become returns when GUI is added)
+// Play a single round between computer and human
 function playRound(computerSelection, playerSelection) {
   if (computerSelection === playerSelection) {
     console.log(
@@ -67,26 +67,24 @@ function playRound(computerSelection, playerSelection) {
   }
   playerScoreCounter.innerHTML = playerScore;
   computerScoreCounter.innerHTML = computerScore;
+  game();
 }
 
-// play a game of first to 5 and detetermine the winner (console.logs will become returns when GUI is added)
+// Determine the winner and disable buttons
 function game() {
-  for (let i = 0; i < 20; i++) {
-    // let playerSelection = window.prompt("Make a selection: ").toLowerCase();
-    // let computerSelection = getComputerChoice().toLowerCase();
-
-    if (playerScore === 5) {
-      console.log(
-        `Gameover! you win Player: ${playerScore} Computer: ${computerScore}`
-      );
-      return;
-    } else if (computerScore === 5) {
-      console.log(
-        `Gameover! You lose Computer: ${computerScore} Player: ${playerScore}`
-      );
-      return;
-    }
+  if (playerScore >= 5) {
+    console.log(
+      `Gameover! you win Player: ${playerScore} Computer: ${computerScore}`
+    );
+    rockButton.setAttribute("disabled", "disabled");
+    paperButton.setAttribute("disabled", "disabled");
+    scissorsButton.setAttribute("disabled", "disabled");
+  } else if (computerScore >= 5) {
+    console.log(
+      `Gameover! You lose Computer: ${computerScore} Player: ${playerScore}`
+    );
+    rockButton.setAttribute("disabled", "disabled");
+    paperButton.setAttribute("disabled", "disabled");
+    scissorsButton.setAttribute("disabled", "disabled");
   }
 }
-
-// game();
