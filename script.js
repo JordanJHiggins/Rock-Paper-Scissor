@@ -69,19 +69,19 @@ function playRound(computerSelection, playerSelection) {
   game();
 }
 
-// Determine the winner and disable buttons
+// Determine the winner,
 function game() {
   if (playerScore >= 5) {
     gameResult.innerHTML = `Gameover! you win Player: ${playerScore} Computer: ${computerScore}`;
-
-    rockButton.setAttribute("disabled", "disabled");
-    paperButton.setAttribute("disabled", "disabled");
-    scissorsButton.setAttribute("disabled", "disabled");
+    disableButtons();
   } else if (computerScore >= 5) {
     gameResult.innerHTML = `Gameover! You lose Computer: ${computerScore} Player: ${playerScore}`;
-
-    rockButton.setAttribute("disabled", "disabled");
-    paperButton.setAttribute("disabled", "disabled");
-    scissorsButton.setAttribute("disabled", "disabled");
+    disableButtons();
   }
+}
+
+function disableButtons() {
+  rockButton.setAttribute("disabled", "disabled");
+  paperButton.setAttribute("disabled", "disabled");
+  scissorsButton.setAttribute("disabled", "disabled");
 }
