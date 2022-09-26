@@ -1,5 +1,8 @@
 let choices = ["rock", "paper", "scissors"];
+let playerScore = 0;
+let computerScore = 0;
 const container = document.querySelector("#container");
+
 // Random computer selection
 function getComputerChoice() {
   let randomChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -9,15 +12,23 @@ function getComputerChoice() {
 const rockButton = document.createElement("button");
 const paperButton = document.createElement("button");
 const scissorsButton = document.createElement("button");
+const playerScoreCounter = document.createElement("h3");
+const computerScoreCounter = document.createElement("h3");
 
 rockButton.textContent = "Rock";
 paperButton.textContent = "Paper";
 scissorsButton.textContent = "Scissors";
 
+// playerScoreCounter.innerHTML += playerScore;
+// computerScoreCounter.innerHTML += computerScore;
+
 container.appendChild(rockButton);
 container.appendChild(paperButton);
 container.appendChild(scissorsButton);
+container.appendChild(playerScoreCounter);
+container.appendChild(computerScoreCounter);
 
+// On click update player and computer selections
 rockButton.addEventListener("click", () => {
   let computerSelection = getComputerChoice();
   let playerSelection = "rock";
@@ -54,12 +65,11 @@ function playRound(computerSelection, playerSelection) {
     console.log(`You win! ${playerSelection} beats ${computerSelection}`);
     playerScore++;
   }
+  playerScoreCounter.innerHTML = playerScore;
+  computerScoreCounter.innerHTML = computerScore;
 }
 
-let playerScore = 0;
-let computerScore = 0;
-
-// Initialize a game of 5 rounds (console.logs will become returns when GUI is added)
+// play a game of first to 5 and detetermine the winner (console.logs will become returns when GUI is added)
 function game() {
   for (let i = 0; i < 20; i++) {
     // let playerSelection = window.prompt("Make a selection: ").toLowerCase();
@@ -76,7 +86,6 @@ function game() {
       );
       return;
     }
-    playRound(computerSelection, playerSelection);
   }
 }
 
