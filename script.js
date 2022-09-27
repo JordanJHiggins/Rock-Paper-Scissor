@@ -5,7 +5,8 @@ const container = document.querySelector(".container");
 const rockButton = document.querySelector("#rock-button");
 const paperButton = document.querySelector("#paper-button");
 const scissorsButton = document.querySelector("#scissors-button");
-
+const playerScoreCounter = document.querySelector("#playerScore");
+const computerScoreCounter = document.querySelector("#computerScore");
 // Random computer selection
 function getComputerChoice() {
   let randomChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -15,8 +16,8 @@ function getComputerChoice() {
 // const rockButton = document.createElement("button");
 // const paperButton = document.createElement("button");
 // const scissorsButton = document.createElement("button");
-const playerScoreCounter = document.createElement("h3");
-const computerScoreCounter = document.createElement("h3");
+// const playerScoreCounter = document.createElement("h3");
+// const computerScoreCounter = document.createElement("h3");
 const gameResult = document.createElement("h1");
 
 // rockButton.textContent = "Rock";
@@ -26,8 +27,8 @@ const gameResult = document.createElement("h1");
 // container.appendChild(rockButton);
 // container.appendChild(paperButton);
 // container.appendChild(scissorsButton);
-container.appendChild(playerScoreCounter);
-container.appendChild(computerScoreCounter);
+// container.appendChild(playerScoreCounter);
+// container.appendChild(computerScoreCounter);
 container.appendChild(gameResult);
 
 // On click update player and computer selections
