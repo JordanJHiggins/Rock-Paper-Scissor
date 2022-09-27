@@ -1,7 +1,10 @@
 let choices = ["rock", "paper", "scissors"];
 let playerScore = 0;
 let computerScore = 0;
-const container = document.querySelector("#container");
+const container = document.querySelector(".container");
+const rockButton = document.querySelector("#rock-button");
+const paperButton = document.querySelector("#paper-button");
+const scissorsButton = document.querySelector("#scissors-button");
 
 // Random computer selection
 function getComputerChoice() {
@@ -9,20 +12,20 @@ function getComputerChoice() {
   return randomChoice;
 }
 
-const rockButton = document.createElement("button");
-const paperButton = document.createElement("button");
-const scissorsButton = document.createElement("button");
+// const rockButton = document.createElement("button");
+// const paperButton = document.createElement("button");
+// const scissorsButton = document.createElement("button");
 const playerScoreCounter = document.createElement("h3");
 const computerScoreCounter = document.createElement("h3");
 const gameResult = document.createElement("h1");
 
-rockButton.textContent = "Rock";
-paperButton.textContent = "Paper";
-scissorsButton.textContent = "Scissors";
+// rockButton.textContent = "Rock";
+// paperButton.textContent = "Paper";
+// scissorsButton.textContent = "Scissors";
 
-container.appendChild(rockButton);
-container.appendChild(paperButton);
-container.appendChild(scissorsButton);
+// container.appendChild(rockButton);
+// container.appendChild(paperButton);
+// container.appendChild(scissorsButton);
 container.appendChild(playerScoreCounter);
 container.appendChild(computerScoreCounter);
 container.appendChild(gameResult);
