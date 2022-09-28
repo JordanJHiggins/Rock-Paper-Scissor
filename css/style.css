@@ -58,9 +58,12 @@ h3 {
 
 .score-board {
   display: flex;
-  padding-top: 5px;
+  flex-direction: column;
+  min-width: 90%;
+  min-height: 30%;
   border: 3px dashed #f4f1d0;
   border-radius: 25px;
+  margin-top: 25px;
 }
 
 #playerScore,
@@ -71,5 +74,52 @@ h3 {
   color: #f4f1d0;
   font-family: "Courier New", Courier, monospace;
   font-size: 60px;
-  padding: 0px 125px 0px 125px;
+  padding: 10px 90px 0px;
+}
+.scoreBoardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* min-width: 70%; */
+}
+
+.scoreBoardContainerTwo {
+  display: flex;
+}
+
+.scoreBoardContainerThree {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreContainerOne,
+.scoreContainerTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.score-counter,
+.game-result {
+  color: #f4f1d0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.score-counter {
+  padding-bottom: 30px;
+}
+
+.game-result {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+p {
+  color: #f4f1d0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  margin: none;
 }
