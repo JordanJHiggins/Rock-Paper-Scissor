@@ -16,8 +16,8 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #326e4d;
-  padding: 4%;
-  margin: 2%;
+  padding: 2%;
+  margin: 1%;
   border-radius: 25px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -41,29 +41,41 @@ h3 {
 .buttons {
   display: flex;
   gap: 100px;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 #rock-button,
 #paper-button,
 #scissors-button {
   display: flex;
-  /* mix-blend-mode: multiply; */
+  justify-content: center;
+  align-items: center;
   background-color: #f4f1d0;
+  /* border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%; */
   border-radius: 25px;
   border-style: none;
   padding: 15px;
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#rock-button:active,
+#paper-button:active,
+#scissors-button:active {
+  box-shadow: 0 10px 15px 0 rgba(40, 88, 61, 0.5),
+    0 6px 20px 0 rgba(40, 88, 61, 0.5);
+  transform: translateY(4px);
+}
+
 .score-board {
+  background-color: #387955;
   display: flex;
   flex-direction: column;
   min-width: 90%;
   min-height: 30%;
   border: 3px dashed #f4f1d0;
   border-radius: 25px;
-  margin-top: 25px;
+  margin-top: 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #playerScore,
@@ -81,7 +93,6 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* min-width: 70%; */
 }
 
 .scoreBoardContainerTwo {
@@ -95,11 +106,23 @@ h3 {
   align-items: center;
 }
 
-.scoreContainerOne,
+.scoreContainerOne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f4f1d0;
+}
+
 .scoreContainerTwo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f4f1d0;
+  border-left: 1px solid #f4f1d0;
 }
 .score-counter,
 .game-result {
@@ -113,13 +136,14 @@ h3 {
 }
 
 .game-result {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bolder;
+  text-shadow: 2px 2px 3px rgb(34, 33, 33);
 }
 
 p {
   color: #f4f1d0;
   font-family: "Courier New", Courier, monospace;
   font-size: 30px;
-  margin: none;
+  margin: 0;
 }
