@@ -9,12 +9,13 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
+    <!-- Header -->
     <div class="container">
-      <div class="header">
+      <div class="header-card">
         <h1>Rock Paper Scissors</h1>
         <h2>First to 5 wins</h2>
         <h3>Take your pick!</h3>
-
+        <!-- Game buttons -->
         <div class="buttons">
           <button id="rock-button">
             <img src="./img/rock.png" alt="Rock" width="90" height="90" />
@@ -32,20 +33,23 @@
           </button>
         </div>
       </div>
-
-      <div class="score-board">
-        <div class="scoreBoardContainer">
-          <div class="scoreBoardContainerTwo">
-            <div class="scoreContainerOne">
+      <!-- Score board -->
+      <div class="score-board-card">
+        <div class="score-container">
+          <div class="score-container-two">
+            <!-- Player score -->
+            <div class="player-score-container">
               <div id="playerScore">0</div>
               <p>PLAYER</p>
             </div>
-            <div class="scoreContainerTwo">
+            <!-- Computer score -->
+            <div class="computer-score-container">
               <div id="computerScore">0</div>
               <p>COMPUTER</p>
             </div>
           </div>
-          <div class="scoreBoardContainerThree">
+          <!-- Game result message -->
+          <div class="gameMessages">
             <div class="score-counter"></div>
             <div class="game-result"></div>
           </div>
