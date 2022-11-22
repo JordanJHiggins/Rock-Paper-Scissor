@@ -1,7 +1,10 @@
+html,
 body {
   background-color: #469769;
+  margin: 0;
+  /* overflow: hidden; */
+  height: 100%;
 }
-
 p {
   color: #f4f1d0;
   font-family: "Courier New", Courier, monospace;
@@ -139,12 +142,15 @@ h3 {
 }
 .score-counter {
   padding-bottom: 30px;
+  display: flex;
+  padding: 0px 50px 0px;
 }
 
 .game-result {
   font-size: 40px;
   font-weight: bolder;
   text-shadow: 2px 2px 3px rgb(34, 33, 33);
+  padding: 50px;
 }
 
 p {
@@ -152,4 +158,25 @@ p {
   font-family: "Courier New", Courier, monospace;
   font-size: 30px;
   margin: 0;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  justify-content: center;
+  gap: 20px;
+  background-color: #326e4d;
+  width: 100vw;
+  height: 5vh;
+  position: fixed;
+  bottom: 0;
+}
+
+.github-logo {
+  transition: transform 0.5s ease-in-out;
+}
+.github-logo:hover {
+  transform: rotate(360deg);
 }
